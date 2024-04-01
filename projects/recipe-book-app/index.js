@@ -1,4 +1,4 @@
-const API_KEY = "275d58779ccf4e22af03e792e8819fff";
+const API_KEY = "e7ad15ee40414c43be3a47007a4cb3b4";
 const recipeListEl = document.getElementById("recipe-list");
 
 function displayRecipes(recipes) {
@@ -37,7 +37,9 @@ async function getRecipes() {
     `https://api.spoonacular.com/recipes/random?number=10&apiKey=${API_KEY}`
   );
 
+  
   const data = await response.json();
+  console.log(data)
 
   return data.recipes;
 }
